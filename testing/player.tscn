@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://e84o8ep045ce"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_fjdfy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_sxgm1"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_fjdfy")
+acceleration = 25.0
+
+[node name="InteractionCast" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_sxgm1")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]

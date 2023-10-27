@@ -1,0 +1,17 @@
+RayCast3D
+SpotLight3D
+HBoxContainer
+TextureRect
+Control
+VBoxContainer
+CanvasLayer
+CSGCylinder3D
+CollisionShape3D
+Camera3D
+CharacterBody3D
+CSGSphere3D
+Area3D
+CSGBox3D
+WorldEnvironment
+Timer
+StaticBody3D

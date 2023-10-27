@@ -1,0 +1,14 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1698381142
+borderB.png::CompressedTexture2D::5400813112289955599::1698366037::1698366111::1::::<><>::
+borderL.png::CompressedTexture2D::4899372919091887810::1698365920::1698366115::1::::<><>::
+borderR.png::CompressedTexture2D::8765313623363129867::1698366131::1698366147::1::::<><>::
+borderT.png::CompressedTexture2D::5193868182592035448::1698366143::1698366147::1::::<><>::
+cursor.png::CompressedTexture2D::7500888938151077864::1698365635::1698365798::1::::<><>::
+cursorActive.png::CompressedTexture2D::7413020137703675216::1698367261::1698367287::1::::<><>::
+game_ui.gd::GDScript::-1::1698372804::0::1::::<>CanvasLayer<>::
+game_ui.tscn::PackedScene::8452256685156930460::1698373105::0::1::::<><>::uid://cb2j7rlkr8msw::::res://borderL.png<>res://game_ui.gd<>uid://cf87irfiutbgq::::res://borderT.png<>uid://de4qsr6pho5dk::::res://cursor.png<>uid://ci7guq7auuyvf::::res://borderB.png<>uid://ddu6mgs5mt4yu::::res://cursorActive.png<>uid://dw48o1tl84ckx::::res://borderR.png
+icon.svg::CompressedTexture2D::4801456110534539739::1698361449::1698363254::1::::<><>::
+main_stage.tscn::PackedScene::3577999054348816736::1698373105::0::1::::<><>::uid://e84o8ep045ce::::res://player.tscn<>uid://can4jsoh8mfdr::::res://icon.svg<>uid://dsoloyhn2ipei::::res://game_ui.tscn
+player.gd::GDScript::-1::1698372655::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::350667374506884888::1698373105::0::1::::<><>::res://player.gd

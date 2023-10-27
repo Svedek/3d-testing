@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsoloyhn2ipei"]
+
+[ext_resource type="Texture2D" uid="uid://cb2j7rlkr8msw" path="res://borderL.png" id="1_mojdd"]
+[ext_resource type="Script" path="res://game_ui.gd" id="1_suwj4"]
+[ext_resource type="Texture2D" uid="uid://cf87irfiutbgq" path="res://borderT.png" id="1_sxbo3"]
+[ext_resource type="Texture2D" uid="uid://de4qsr6pho5dk" path="res://cursor.png" id="1_xlw8u"]
+[ext_resource type="Texture2D" uid="uid://ci7guq7auuyvf" path="res://borderB.png" id="3_ag86r"]
+[ext_resource type="Texture2D" uid="uid://ddu6mgs5mt4yu" path="res://cursorActive.png" id="3_qc4nm"]
+[ext_resource type="Texture2D" uid="uid://dw48o1tl84ckx" path="res://borderR.png" id="5_qp2c6"]
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_suwj4")
+cursor_base = ExtResource("1_xlw8u")
+cursor_active = ExtResource("3_qc4nm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BorderBot4" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_mojdd")
+stretch_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="BorderBot2" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_sxbo3")
+stretch_mode = 1
+
+[node name="Top" type="Control" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Left" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Cursor" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_xlw8u")
+
+[node name="Right" type="Control" parent="HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Bot" type="Control" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="BorderBot" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_ag86r")
+stretch_mode = 1
+
+[node name="BorderBot3" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_qp2c6")
+stretch_mode = 1

@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://bq8heewh50s13"]
+
+[ext_resource type="PackedScene" uid="uid://e84o8ep045ce" path="res://player.tscn" id="1_d0e5w"]
+[ext_resource type="Texture2D" uid="uid://can4jsoh8mfdr" path="res://icon.svg" id="1_ys4na"]
+[ext_resource type="PackedScene" uid="uid://dsoloyhn2ipei" path="res://game_ui.tscn" id="3_6g82l"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qpho7"]
+panorama = ExtResource("1_ys4na")
+
+[sub_resource type="Sky" id="Sky_h427x"]
+sky_material = SubResource("PanoramaSkyMaterial_qpho7")
+
+[sub_resource type="Environment" id="Environment_pb11g"]
+background_mode = 2
+sky = SubResource("Sky_h427x")
+volumetric_fog_enabled = true
+volumetric_fog_length = 96.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x73h4"]
+size = Vector3(25, 1, 25)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r4phv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vcjsk"]
+
+[node name="MainStage" type="WorldEnvironment"]
+environment = SubResource("Environment_pb11g")
+
+[node name="Stage" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stage"]
+shape = SubResource("BoxShape3D_x73h4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Stage"]
+size = Vector3(25, 1, 25)
+
+[node name="Stage2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.09297, 1.30872, 5.81398)
+collision_layer = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stage2"]
+shape = SubResource("CylinderShape3D_r4phv")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Stage2"]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.4369, 1.55314, -2.38543)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_vcjsk")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Area3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_d0e5w")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8945, 2.4627, -2.21735)
+
+[node name="GameUI" parent="." instance=ExtResource("3_6g82l")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.672186, 0.740382, 0, -0.740382, 0.672186, 0.305424, 14.5062, 13.4304)
+light_color = Color(1, 1, 0, 1)
+light_energy = 16.0
+spot_range = 37.4622
